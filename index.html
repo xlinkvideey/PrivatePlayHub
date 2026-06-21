@@ -1,334 +1,152 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link rel="preconnect" href="https://cdn2.videy.co">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>bule edan</title>
+
+<title>Private Video Access | Exclusive Content</title>
+
+<meta name="description" content="Exclusive private content with limited access. Click to watch full video.">
+<meta name="keywords" content="private video, exclusive content, premium video, limited access">
+<meta name="robots" content="noindex,nofollow">
+
+<link rel="canonical" href="https://xlinkvideey.github.io/PrivateMomentsTV">
+<link rel="icon" href="https://xlinkvideey.github.io/PrivatePlayHub/xlinkz.jpg">
+
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Private Video Access">
+<meta property="og:description" content="Exclusive content. Limited access.">
+<meta property="og:image" content="https://xlinkvideey.github.io/PrivatePlayHub/doblex.jpg">
+<meta property="og:url" content="https://xlinkvideey.github.io/PrivateMomentsTV">
+
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Private Video Access">
+<meta name="twitter:description" content="Exclusive private video.">
+<meta name="twitter:image" content="https://xlinkvideey.github.io/PrivatePlayHub/doblex.jpg">
+
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "WebPage",
+ "name": "Private Video Access",
+ "description": "Exclusive limited access video content.",
+ "url": "https://xlinkvideey.github.io/PrivateMomentsTV",
+ "image": "https://xlinkvideey.github.io/PrivatePlayHub/doblex.jpg"
+}
+</script>
 
 <style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
+*, :after, :before { box-sizing: border-box;}
+::-webkit-scrollbar { width: 2px;}
+
+@keyframes para {
+100% {
+background-position: -5000px 20%, -800px 95%, 500px 50%, 1000px 100%, 400px 0;
+}
 }
 
-body{
-  font-family:Arial,sans-serif;
-  background:#fff;
-  color:#111;
-  min-height:100vh;
-  overflow-x:hidden;
+:root {
+--primary-color: gold;
+--bg-color: black;
+--text-color: white;
+--button-text: black;
 }
 
-
-
-.main-header{
-  width:100%;
-  background:#fff;
-  border-bottom:1px solid #eee;
-  position:sticky;
-  top:0;
-  z-index:1000;
+body {
+margin: 0;
+font-family: Arial, sans-serif;
+color: var(--text-color);
+text-align: center;
+background-color: #000;
+background-image: 
+url("https://xlinkvideey.github.io/PrivatePlayHub/xlinkz.jpg");
+background-repeat: repeat-x;
+background-size: cover;
+animation: 50s para infinite linear;
+min-height: 100vh;
 }
 
-.header-container{
-  width:100%;
-  max-width:1200px;
-  margin:auto;
-  padding:12px 16px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
+.container {
+width: 100%;
+max-width: 520px;
+margin: auto;
+padding: clamp(15px,4vw,30px);
 }
 
-.header-left{
-  display:flex;
-  align-items:center;
-  gap:12px;
+.profile-pic {
+width: clamp(90px, 25vw, 130px);
+height: clamp(90px, 25vw, 130px);
+border-radius: 50%;
+object-fit: cover;
+border: 3px solid var(--primary-color);
+margin-bottom: 15px;
 }
 
-.header-title{
-  text-decoration:none;
-  color:#111;
-  font-size:26px;
-  font-weight:700;
+h1 {
+font-size: clamp(18px, 4.5vw, 26px);
+margin-bottom: 10px;
 }
 
-.header-upload-btn{
-  text-decoration:none;
-  background:#f3f3f3;
-  color:#111;
-  padding:8px 14px;
-  border-radius:12px;
-  font-size:14px;
-  font-weight:600;
+.link-btn {
+display: block;
+width: 100%;
+background: var(--primary-color);
+color: var(--button-text);
+padding: clamp(12px,3.5vw,16px);
+margin: 10px 0;
+border-radius: 10px;
+text-decoration: none;
+font-size: clamp(14px,3.5vw,18px);
+font-weight: bold;
 }
 
-
-
-.video-player-wrap{
-  width:100%;
-  max-width:1000px;
-  margin:auto;
-  padding:16px;
+.link-btn:hover {
+background: #c2185b;
 }
 
-.video-box{
-  width:100%;
-  aspect-ratio:16/9;
-  background:#000;
-  border-radius:12px;
-  overflow:hidden;
-  position:relative;
+.sampleMarquee {
+color: white;
+background-color: #000;
+padding: 12px;
+font-weight: bold;
+font-style: italic;
+font-size: clamp(12px,3vw,16px);
 }
 
-.video-box video{
-  width:100%;
-  height:100%;
-  object-fit:contain;
-  background:#000;
+/* extra mobile spacing */
+@media (max-width:480px){
+.container{
+padding:20px 15px;
 }
-
-#video-error{
-  position:absolute;
-  inset:0;
-  display:none;
-  align-items:center;
-  justify-content:center;
-  color:#fff;
-  font-size:18px;
 }
-
-
-
-.video-actions{
-  width:100%;
-  display:flex;
-  justify-content:center;
-  margin-top:16px;
-}
-
-.download-btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  text-decoration:none;
-  background:linear-gradient(90deg,#667eea,#764ba2);
-  color:#fff;
-  padding:14px 28px;
-  border-radius:50px;
-  font-size:17px;
-  font-weight:700;
-  width:100%;
-  max-width:320px;
-}
-
-
-
-footer{
-  width:100%;
-  text-align:center;
-  padding:25px 15px;
-  color:#777;
-  font-size:14px;
-  line-height:1.7;
-}
-
-footer a{
-  color:#777;
-  text-decoration:none;
-}
-
-
-
-#donmeg{
-  width:100%;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  margin:20px 0;
-  overflow:hidden;
-}
-
-#donmeg iframe{
-  max-width:100%;
-}
-#donmeg iframe{
-  max-width:100%;
-  border:none;
-}
-@media(max-width:768px){
-
-  .header-title{
-    font-size:22px;
-  }
-
-  .header-upload-btn{
-    font-size:13px;
-    padding:7px 12px;
-  }
-
-  .video-player-wrap{
-    padding:10px;
-  }
-
-  .video-box{
-    border-radius:8px;
-  }
-
-  .download-btn{
-    font-size:16px;
-    padding:13px 20px;
-  }
-
-}
-
 </style>
 </head>
 
 <body>
 
-<header class="main-header">
-  <div class="header-container">
+<div class="container">
 
-    <div class="header-left">
+<img src="https://xlinkvideey.github.io/PrivatePlayHub/xlinkz.jpg" class="profile-pic">
 
-      <a href="/" class="header-title">
-        Videy
-      </a>
+<h1>⬇️ 𝗩𝗜𝗗𝗘𝗢 𝗟𝗜𝗡𝗞 𝗕𝗘𝗟𝗢𝗪 ⬇️</h1>
 
-      <a href="/" class="header-upload-btn">
-        Upload
-      </a>
+<a href="https://illuminationacceptedkeynote.com/uq35g9cfwq?key=4c20fb6ff053c288f368b40b73680702" class="link-btn" target="_blank">𝗣𝗟𝗔𝗬 𝗩𝗜𝗗𝗘𝗢</a>
+<a href="https://illuminationacceptedkeynote.com/f9hhubydk?key=b50f66e969f66dabeb91f9dc553c10cf" class="link-btn" target="_blank">𝗦𝗘𝗥𝗩𝗘𝗥</a>
+<a href="https://illuminationacceptedkeynote.com/bpyh2n3u1?key=365cd9a5147798a9f666011d6cbcd8f0" class="link-btn" target="_blank">𝗛𝗢𝗠𝗘</a>
 
-    </div>
-
-  </div>
-</header>
-
-<div class="video-player-wrap">
-
-  <div class="video-box">
-
-    <video
-      id="video"
-      controls
-      playsinline
-      controlsList="nodownload noplaybackrate"
-      oncontextmenu="return false;">
-    </video>
-
-    <div id="video-error">
-      Video tidak tersedia
-    </div>
-
-  </div>
-
-  <div class="video-actions">
-
-    <a href="#" id="downloadBtn" class="download-btn">
-      DOWNLOAD
-    </a>
-
-  </div>
-
+<marquee class="sampleMarquee">
+If the video doesn't open, click on the other server link.
+</marquee>
 </div>
-<script src="https://pl27575074.effectivecpmnetwork.com/86/b0/31/86b031edbed52dfaee0ffbd0f3170f9d.js"></script>
-<div id="donmeg">
-
-  <script>
-    atOptions = {
-      key : '668912fc9dc8ba6ba14a7fac182d4a20',
-      format : 'iframe',
-      height : 250,
-      width : 300,
-      params : {}
-    };
-  </script>
-
-  <script src="https://www.highperformanceformat.com/668912fc9dc8ba6ba14a7fac182d4a20/invoke.js"></script>
-
-</div>
-
-<footer>
-  Copyright © 2026
-  <br>
-  <a href="#">Terms of Service</a> •
-  <a href="#">Report Abuse</a>
-</footer>
-
-<script>
-
-
-
-const adLink = atob(
-  "aHR0cHM6Ly93d3cuZWZmZWN0aXZlY3BtbmV0d29yay5jb20vdXEzNWc5Y2Z3cT9rZXk9NGMyMGZiNmZmMDUzYzI4OGYzNjhiNDBiNzM2ODA3MDI"
-);
-
-
-
-document.getElementById("downloadBtn").addEventListener("click", function(e){
-
-  e.preventDefault();
-  window.open(adLink, "_blank");
-
-});
-
-
-
-const video = document.getElementById("video");
-const videoError = document.getElementById("video-error");
-
-const params = new URLSearchParams(window.location.search);
-const id = params.get("id");
-
-if(!id){
-
-  setTimeout(() => {
-
-    window.location.href = adLink;
-
-  }, 1500);
-
-}
-
-
-
-else{
-
-  const base = "https://cdn2.videy.co/" + id;
-
-  loadVideo(base + ".mp4");
-
-  function loadVideo(src){
-
-    video.src = src;
-    video.load();
-
-  }
-
-  video.onerror = function(){
-
-    if(!video.dataset.movTried){
-
-      video.dataset.movTried = "1";
-      loadVideo(base + ".mov");
-
-    }else{
-
-      video.style.display = "none";
-      videoError.style.display = "flex";
-
-    }
-
-  };
-
-}
-
-</script>
+<script async="async" data-cfasync="false" src="https://illuminationacceptedkeynote.com/b0b915e4106768d04f15b686c50c4b7e/invoke.js"></script>
+<div id="container-b0b915e4106768d04f15b686c50c4b7e"></div>
+<!-- Histats.com  START  (aync)-->
 <script type="text/javascript">var _Hasync= _Hasync|| [];
-_Hasync.push(['Histats.start', '1,5026796,4,9,110,60,00010000']);
+_Hasync.push(['Histats.start', '1,4716773,4,9,110,60,00010000']);
 _Hasync.push(['Histats.fasi', '1']);
 _Hasync.push(['Histats.track_hits', '']);
 (function() {
@@ -336,6 +154,8 @@ var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async
 hs.src = ('//s10.histats.com/js15_as.js');
 (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
 })();</script>
-<noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?5026796&101" alt="" border="0"></a></noscript>  
+<noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?4716773&101" alt="" border="0"></a></noscript>
+<!-- Histats.com  END  -->
+
 </body>
 </html>
